@@ -103,10 +103,11 @@ class TeamLead extends Instructor {
     constructor(TLAttributes){
         super(TLAttributes);
         this.gradClassName = TLAttributes.gradClassName,
-        this.favInstructor = TLAttributes.gradClassName
+        this.favInstructor = TLAttributes.gradClassName,
+        this.phrase = TLAttributes.phrase
     }
     standUp(channel) {
-        return `${this.name} announces to ${channel} @channel ready to rock!`;
+        return `${this.name} announces to ${channel} @channel ${this.phrase}`
     }
     debugsCode(name, subject) {
         return `${this.name} debugs ${name}'s code on ${subject}`
@@ -117,10 +118,11 @@ class TeamLeadOne extends Instructor {
     constructor(TLAttributes){
         super(TLAttributes);
         this.gradClassName = TLAttributes.gradClassName,
-        this.favInstructor = TLAttributes.gradClassName
+        this.favInstructor = TLAttributes.gradClassName,
+        this.phrase = TLAttributes.phrase
     }
     standUp(channel) {
-        return `${this.name} announces to ${channel} @channel standy time!`;
+        return `${this.name} announces to ${channel} @channel ${this.phrase}`;
     }
     debugsCode(name, subject) {
         return `${this.name} debugs ${name}'s code on ${subject}`
@@ -202,7 +204,8 @@ const teamLead = new TeamLead({
     favLanguage: 'Java?',
     catchPhrase: 'BOOM!',
     gradClassName: 'WEB20',
-    favInstructor: 'Josh Knell?'
+    favInstructor: 'Josh Knell?',
+    phrase: 'ready to rock!'
 })
 
 const teamLeadOne = new TeamLead({
@@ -213,7 +216,8 @@ const teamLeadOne = new TeamLead({
     favLanguage: 'CSS',
     catchPhrase: 'Catch ya later!',
     gradClassName: 'WEB20',
-    favInstructor: 'Britt Hemming'
+    favInstructor: 'Britt Hemming',
+    phrase: 'standy time!'
 })
 
 
